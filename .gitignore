@@ -13,6 +13,10 @@ tooling/.state/
 
 # --- build artifacts ---
 **/build/
+# ...but these two are source, not output: the server's build-from-branch runner
+# and its /admin/build route. Without them the server doesn't compile.
+!server/lib/src/build/
+!server/routes/admin/build/
 .dart_tool/
 .dart_frog/
 .packages
